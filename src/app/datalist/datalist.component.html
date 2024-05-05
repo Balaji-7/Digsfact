@@ -1,0 +1,87 @@
+<div class="vertical-line"></div>
+
+<div class="user">
+  <div class="circle">
+    <mat-icon>W</mat-icon>
+  </div>
+</div>
+<hr>
+<div class="whole-container">
+<div>
+<div class="header-container">
+<h1 class="head"> Cases </h1>
+
+<div class="username">
+  <input class="searchbox" type="text" *ngIf="toBeSearched" placeholder="Enter UserName to search" (keyup)="filter($event)" />
+</div> 
+
+    <button (click)="search()"><mat-icon>search</mat-icon>Search</button> &nbsp;&nbsp;
+    <button (click)="search()"><mat-icon>filter_list</mat-icon>Filter</button> &nbsp;&nbsp;
+    <button (click)="sort()"><mat-icon>arrow_downward</mat-icon>Sort</button> &nbsp;&nbsp;
+    <button (click)="new()"><mat-icon>add</mat-icon>New  </button>
+    </div>
+</div>
+
+
+<br>
+<div *ngIf="users.length === 0">
+  <p class="empty">No records found</p>
+</div>
+<div>
+  <table class="tableview">
+    <tr>
+      <th><input type="checkbox" (change)="trigger($event)"></th>
+      <th>CASE ID</th>
+      <th>CUSTOMER</th>
+      <th>SHARE APP VIA</th>
+      <th>JOIN WITH</th>
+    </tr>
+    <tr *ngFor="let user of users; index as i"> 
+      <td><input class="check" id="checked" type="checkbox"></td>
+      <td class="detail" (click)="opendetail(user)">{{user.id}} <br>
+      {{user.created}}</td>
+      <td>{{user.name}}<br>
+        <mat-icon  aria-hidden="false" aria-label="Example email icon" fontIcon="email"></mat-icon>
+        {{user.gmail}} &nbsp; |
+        <mat-icon aria-hidden="false" aria-label="Example phone icon" fontIcon="phone"></mat-icon>
+        {{user.phone}}
+      </td>
+      <td>
+        <mat-icon (click)="dialogopen(user)">email</mat-icon>&nbsp;
+        <mat-icon (click)="dialogopen(user)">phone</mat-icon>&nbsp;
+        <mat-icon (click)="dialogopen(user)">link</mat-icon>
+      </td>
+      <td>
+        <mat-icon color="primary" (click)="dialogopen(user)">meeting_room</mat-icon> &nbsp;
+        <mat-icon (click)="dialogopen(user)">message</mat-icon> &nbsp;
+        <mat-icon (click)="dialogopen(user)">video_call</mat-icon>
+      </td>
+      <td ><mat-icon (click)="dialogopen(user)">more_vert</mat-icon></td>
+    </tr>
+  </table>
+</div>
+<br>
+
+
+<div class="table-container">
+  <table>
+  
+  </table>
+
+  <div class="paginator">
+    <div class="rows-per-page">
+      Rows per page:
+      <select>
+        <option>10</option>
+        <option>20</option>
+        <option>50</option>
+      </select>
+    </div>
+    <div class="pagination">
+      <button (click)="Previous()">Previous</button> &nbsp;
+      <button (click)="next()">Next</button>
+    </div>
+  </div>
+</div>
+<br>
+</div>

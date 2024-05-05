@@ -1,0 +1,58 @@
+
+<div class="user">  
+    <div class="circle">
+  <mat-icon>W</mat-icon>
+
+    </div>
+  </div>
+
+<button  class="back" (click)="back()"><mat-icon>arrow_back</mat-icon> &nbsp; Photo " {{user.name + "_"+ user.id}}"</button>
+  
+<div class="btns">
+
+  <button (click)="overlay()">
+    <mat-icon>notes</mat-icon>
+    overlay</button>
+  <a class="reset" (click)="reset()">reset</a>
+
+  <button (click)="save()" class="save">save</button>
+
+    </div>
+  <hr>
+<div class="imgButtons">
+  <button (click)="openNotesDialog()" class="first"> <mat-icon (click)="openNotesDialog()">notes</mat-icon>
+    Notes</button>
+  <button (click)="scale()" class="second">
+    <mat-icon>push_pin</mat-icon>
+    CM
+    <select>
+      <option>CM</option>
+      <option>Inches</option>
+      <option>Feet</option>
+      
+    </select></button>
+  <button (click)="removepins()" class="third"> 
+    <mat-icon>push_pin</mat-icon>
+    Remove Pins</button>
+  <button (click)="Measure()" class="fourth">
+    <mat-icon>format_line_spacing</mat-icon>
+    Measure</button>
+  <button class="fifth" (click)="openMeasure()">Extend Plane
+    <mat-icon>fullscreen</mat-icon>
+  </button>
+  <button (click)="Magnify()" class="sixth">Magnify
+    <mat-icon>search</mat-icon>
+  </button>
+  <button (click)="support()" class="seventh">Support 
+    <mat-icon>email</mat-icon>
+  </button>
+  <button (click)="help()" class="eighth">FAQs
+    <mat-icon>help</mat-icon>
+  </button>
+</div>
+  <hr>
+
+
+<div class="container">
+  <img src="../../assets/stone.jfif" width="50%"/>
+</div>

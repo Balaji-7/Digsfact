@@ -1,0 +1,58 @@
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    font-size: 24px; 
+    margin-left:96%
+  }
+
+  hr{
+    margin-left: 50px;
+  }
+
+  .first,.second,.third{
+    padding-left: 25px;
+    margin-left: 30px;
+  }
+  .fourth,.fifth{
+    margin-left: 50px;
+  }
+  .sixth,.seventh,.eighth{
+    margin-left: 80px;
+  }
+
+  .mat-icon {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+
+  img{
+    margin-left: 250px;
+    margin-top: 50px;
+  }
+  .reset{
+    color: blue;
+    margin-left: 30px;
+    
+    }
+
+  .btns{
+    margin-left:70%;
+    
+  }
+  .save{
+    margin-left: 50px;
+  }
+
+  button,a{
+    cursor: pointer;
+  }
+
+  .back{
+    font-size: 20px;
+  }
