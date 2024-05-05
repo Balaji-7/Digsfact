@@ -35,7 +35,7 @@ back(){
 
 openNotesDialog(): void {
   const dialogRef = this.dialog.open(NotesdialogComponent, {
-    width: '400px', // Adjust the width as needed
+    width: '400px',
     data: { title: `${this.user.name}`, content:`user: ${this.user}` }
     
   });
