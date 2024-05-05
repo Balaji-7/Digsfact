@@ -80,18 +80,18 @@ export class DatalistComponent {
   sort(){
     if(!this.issorted){
     this.users = this.values.sort((a, b) => {
-      if (a.name < b.name) return 1; // Return 1 to indicate that 'a' comes after 'b'
-      if (a.name > b.name) return -1; // Return -1 to indicate that 'a' comes before 'b'
-      return 0; // Return 0 if the names are equal
+      if (a.name < b.name) return 1; 
+      if (a.name > b.name) return -1; 
+      return 0;
     });
     this.issorted = true
     console.log(this.users)
   }
   else{
     this.users = this.values.sort((a, b) => {
-      if (a.name > b.name) return 1; // Return 1 to indicate that 'a' comes after 'b'
-      if (a.name < b.name) return -1; // Return -1 to indicate that 'a' comes before 'b'
-      return 0; // Return 0 if the names are equal
+      if (a.name > b.name) return 1; 
+      if (a.name < b.name) return -1; 
+      return 0; 
     });
     console.log(this.users)
     this.issorted = false
